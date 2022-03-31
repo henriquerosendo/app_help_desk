@@ -1,6 +1,5 @@
 <?php 
-      $con= get_my_db();
-      include  'validacao/valida_login.php';
+      // error_reporting(E_ERROR | E_PARSE);
 ?>
 
 <html>
@@ -37,9 +36,9 @@
               Login
             </div>
             <div class="card-body">
-              <form action =""  method="POST">
+              <form action ="validacao/valida_login.php"  method="POST">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="E-mail">
+                  <input type="text" class="form-control" name="email" placeholder="E-mail">
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control" name="password" placeholder="Senha">
