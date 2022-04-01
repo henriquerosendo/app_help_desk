@@ -23,7 +23,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
         $_SESSION['user'] = $usuario['id'];
 
-        header('location: ../pagina_principal/home.php');     
+        header('location: ../pagina_principal/home.html');     
     } else {
         echo "falha ao logar";
     }

@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>App Help Desk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+      .card-home {
+        padding: 30px 0 0 0;
+        width: 100%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand me-2" href="#">
+        <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top ms-3" alt="">
+        App Help Desk
+      </a>
+    </nav>
+
+    <div class="container">    
+      <div class="row">
+
+        <div class="card-home">
+          <div class="card">
+            <div class="card-header">
+              Menu
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6 d-flex justify-content-center">
+                  <a href="#">
+                    <img src="../img/formulario_abrir_chamado.png" width="70" height="70"></br>
+                  </a>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                  <img src="../img/formulario_consultar_chamado.png" width="70" height="70">
+                </div>
+
+                <div class="col-6 d-flex justify-content-center"> <!-- Incio da area de chamados-->
+                  <button type="button" class="btn btn-outline-info mt-2"data-bs-toggle="modal" data-bs-target="#modal-chamados">
+                    Abrir chamado
+                  </button>
+
+                  <!-- inicio Modal Chamados-->
+                  <div class="modal fade" id="modal-chamados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Realizar um chamado</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <div class="form-check">
+                            <input class="form-check-input checkVer"  type="radio" value="" name="flexRadioDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Chamar tecnico para reparo de computador;
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input checkVer"  type="radio" value="" name="flexRadioDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Solicitar um material;
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input checkVer" type="radio" value="" name="flexRadioDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Solicitar recursos de compra para item;
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input checkVer" type="radio" value="" name="flexRadioDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Solicitar limpeza.
+                            </label>
+                          </div>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-primary" id="verificarCheck">Salvar chamado</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fim modal chamados-->
+
+                </div> <!-- Fim da area de chamados -->
+
+                <div class="col-6 d-flex justify-content-center"> <!-- area de consulta de chamados em aberto -->
+
+                  <button type="button" class="btn btn-outline-info mt-2"  data-bs-toggle="modal" data-bs-target="#modal-ConsultarChamado">
+                    Consultar chamados em aberto
+                  </button>
+
+                    <!-- Inicio Modal Consultar chamado -->
+                    <div class="modal fade" id="modal-ConsultarChamado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fim modal -->
+
+
+
+                </div> <!-- fim da area de consulta de chamados-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript"  src="../js/func.js">  
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+  </body>
+</html>
